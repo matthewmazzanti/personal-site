@@ -1,0 +1,181 @@
+MATTHEW MAZZANTI Software Engineer 19305 Tattershall Drive, Germantown, MD
+20874, E-mail: matthew.mazzanti@gmail.com Phone: 240.855.6586 LinkedIn:
+https://www.linkedin.com/in/matthew-mazzanti-b4679211a/
+
+EXPERIENCE
+
+SOFTWARE ENGINEER
+
+ - WELGO
+
+
+2020-02 - now Helped to bring a faltering product to market, rebuilding and
+refining critical systems such as devops, frontend, and backend while under
+tight timelines. I brought the scattered pieces into a single monorepo, created
+a cutting edge build and deployment system, and worked tirelessly to iterate
+and improve upon the system. Over the course of two months, the product went
+from a proof of concept to a real deployed system, used every day by physicians
+in Maryland. Hightlights include:
+
+AWS containerized services - Shifted from an unrefined, ad-hoc EC2 deployment
+system to a stable and highly available container based system hosted in
+ECS.Devops/Continuous integration - Completely retooled the build system to
+facilitate auto triggered reproducable builds and deployments using AWS
+CodeBuild and CodeDeploy.UI/UX design - Built and maintained multiple websites
+with both Angular and React frontends, rebuilding and rearchitecting the
+systems so that they became more reliable, faster, and easier to use.Tight
+timelines - As an early-stage startup, all of the work was done under
+incredibly tight timelines, with little tolerance for downtime. A major focus
+of the design and deployment was ensuring that everything was done in a way to
+maximize output and results, while being quick to bugfix and redeploy if
+problems arose. Reverse engineering - Left with little documentation, I had to
+reverse engineer thousands of lines of code in order to improve and extend
+services.
+
+
+SOFTWARE ENGINEER
+
+ - AT&AMP;T CHIEF SECURITY OFFICE
+
+
+2019-06 - 2020-02 Focused on command-line data manipulation tools, I brought my
+knowledge of compter science and UX design to make manipulating data easy and
+simple for security researchers at AT&amp;T. Within my team, I was a valuable
+source of advice and guidance on all things technical, where I was often turned
+to for advice on architecture, technologies, or just general programming help.
+Highlights include:
+
+
+
+Linux sysadmin - Built out and self-hosted the needed development
+infrastructure, such as hosted git repositories, continous integration, and
+sandboxed development environments.Devops/Continuous integration - From day 1,
+I pushed for continuous integration and testing within the team, dramatically
+increasing developer productivity and code correctness.Software architecture -
+I was often seeked out to help in designing and architecturing systems - even
+those I was not directly working on. I helped elevate many of the developers
+within the team, spending many hours working closely with team members to
+facilitate deep understanding of the systems we were working with.Developer
+advocate - In addition to helping developers I also played a customer facing
+role where I demoed and explained the technologies we were building, provided
+direction and suggestions to our researchers on what features were possible and
+the timelines different approaches would take, and played a key role in
+creating implementation plans we followed for bringing our products to
+life.Data analytics - A primary focus of our work was on data analytics, where
+I used my past experience with Python, and new experience with GoLang, to
+create fast and easy to use tools for processing big data.
+
+
+
+
+SOFTWARE ENGINEER - TRUSHIELD INC, ASHBURN VA
+
+
+2018-06 - 2018-12 Worked to re-architect and re-implement an email phishing
+learning and analysis tool called &#34;Phishield&#34; to improve it in nearly
+every measurable aspect. Highlights include:
+
+    Reverse engineering  - Inherited code from previous team and had to learn
+    it without training and documentation. Architecture design - Redesigned the
+    architecture so that it was more flexible and understandable. Brought the
+    project size down from over 5000 lines to under 2000. Optimization - Used
+    Numpy to improve times on data de-duplication for csv files from over 10+
+    minutes to less than 15 seconds. Shifted from MySql to Postgres to allow
+    for in-place &#34;upserts&#34; to allow new data to be added or old data to
+        be changed without having to make a full loop from SQL to Python and
+        back.UI/UX design -  Worked with users to redesign workflows to reduce
+        complexity.  Used templates and per-page analysis to decrease page
+        loading/rendering times for a smoother user experience.  Improved
+        overall look and feel of the site.Data analysis and visualization -
+        Reworked the data visualization workflow to rely more upon back-end
+        rendering, allowing visualizations to be faster and cached for better
+        performance. Reworked visualizations for clarity.Quality assurance -
+        Wrote scripts to separate testing data from real data in the server.AWS
+        server management - Managed migration between RHEL 6 instance to new
+        Amazon Linux instance.  Did cost-benefit analysis of using outside
+        services vs boot-strapping them on the EC2 instances. 
+
+
+SOFTWARE ENGINEER INTERN - FANNIE MAE, RESTON VA
+
+
+2017-06 - 2017-08 Wrote an internal application to allow for the searching and
+analysis of mortgage database records for Fannie Mae&#39;s external user
+integration department. Highlights include:  
+
+UI/UX design - Researched use cases and developed UI to facilitate the most
+common ones, without sacrificing the flexibility needed for less-common ones. 
+Wrote custom Angular/Bootstrap routines, specifically custom datavisualization
+and date/range picking, to keep style consistent across application while
+extending functionality.Optimization - Database calls done with with paging and
+front-end caching so that database use was minimized and load times were
+reduced. Server side - Restful JSON API in Java Server Pages.Continuous
+integration - Built CI pipeline with Jenkins.
+
+
+IT DIRECTOR
+
+ - WMUC RADIO, COLLEGE PARK
+
+
+2017-12 - 2018-06 Lead back- and front-end rebuild of majority of station
+infrastructure, improving security and efficiency. Highlights include: 
+
+    Stack upgrades - Worked with university IT to develop a plan to migrate
+    aging LAMP stack infrastructure and add security components (VPN access and
+    SSL) with minimal downtime for users.Team management - Started a small team
+    of developers to meet and collectively work on site components. The group
+    also focused on instruction of real-world tech like Git, React, and
+    Linux.Container integration - Servers set up with reusable Docker
+    containers so that testing and deployment of needed services was as
+    painless as possible.
+
+
+
+EDUCATION UNIVERSITY OF MARYLAND, COLLEGE PARK
+
+
+2015-08 - 2019-05 B.S. Computer Science
+
+Study concentration:
+
+Software developmentComputer networkingData analysisMachine learningDatabase
+design
+
+
+
+SKILLS Python, 
+
+Angular/React, JavaScript
+
+, Linux/SysAdmin
+
+, GoLang
+
+, HTML/CSS, AWS
+
+, Haskell
+
+, C/C++
+
+, SQL/Database
+
+, TCP/Networking, Java
+
+
+
+ I’m looking for an position that will allow me to work on a team of talented
+ people that I can learn from, continue to expand my knowledge with, and take
+ the things I’ve learned in school, previous work, and on my own and apply it
+ to solve new and interesting real world problems.   I love solving challenging
+ problems, figuring out how things work, and understanding technology. Serious
+ Linux nerd and Python devotee. Things I&#39;m passionate about: full stack
+ development, UI/UX design, cloud based/scalable architecture design, data
+ science, and machine learning.   
+
+REFERENCES
+
+
+AVAILABLE UPON REQUEST
+
+
