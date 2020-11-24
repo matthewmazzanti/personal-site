@@ -6,37 +6,35 @@ const IndexPage = () =>
   <Layout>
     <section>
       <h2>Software Engineer </h2>
-      <p>
-        <table>
-          <tr>
-            <td>
-              <a href="https://www.linkedin.com/in/matthew-mazzanti-b4679211a">
-                LinkedIn
-              </a>
-            </td>
-            <td>
-              <a href="https://github.com/matthewmazzanti">
-                GitHub
-              </a>
-            </td>
-          </tr>
-        </table>
+      <table>
+        <tr>
+          <td>
+            <a href="https://www.linkedin.com/in/matthew-mazzanti-b4679211a">
+              LinkedIn
+            </a>
+          </td>
+          <td>
+            <a href="https://github.com/matthewmazzanti">
+              GitHub
+            </a>
+          </td>
+        </tr>
+      </table>
 
-        <table>
-          <tr>
-            <td align="right">Address:</td>
-            <td>19305 Tattershall Drive, Germantown. MD 20874</td>
-          </tr>
-          <tr>
-            <td align="right">E-mail:</td>
-            <td>matthew.mazzanti@gmail.com</td>
-          </tr>
-          <tr>
-            <td align="right">Phone:</td>
-            <td>(240)855-6586</td>
-          </tr>
-        </table>
-      </p>
+      <table>
+        <tr>
+          <td align="right">Address:</td>
+          <td>19305 Tattershall Drive, Germantown. MD 20874</td>
+        </tr>
+        <tr>
+          <td align="right">E-mail:</td>
+          <td>matthew.mazzanti@gmail.com</td>
+        </tr>
+        <tr>
+          <td align="right">Phone:</td>
+          <td>(240)855-6586</td>
+        </tr>
+      </table>
 
       <p>
         I'm looking for an position that will allow me to work on a team of
@@ -52,36 +50,20 @@ const IndexPage = () =>
 
     <section>
       <h2>Skills</h2>
-      <table>
-        <tr>
-          <td>
-            <ul>
-              <li>Python</li>
-              <li>Angular/React</li>
-              <li>JavaScript</li>
-              <li>Linux/SysAdmin</li>
-            </ul>
-          </td>
-
-          <td>
-            <ul>
-              <li>GoLang</li>
-              <li>AWS</li>
-              <li>HTML/CSS</li>
-              <li>Haskell</li>
-            </ul>
-          </td>
-
-          <td>
-            <ul>
-              <li>C/C++</li>
-              <li>SQL</li>
-              <li>TCP/Networking</li>
-              <li>Java</li>
-            </ul>
-          </td>
-        </tr>
-      </table>
+      <ul>
+        <li>Python</li>
+        <li>Angular/React</li>
+        <li>JavaScript</li>
+        <li>Linux/SysAdmin</li>
+        <li>GoLang</li>
+        <li>AWS</li>
+        <li>HTML/CSS</li>
+        <li>Haskell</li>
+        <li>C/C++</li>
+        <li>SQL</li>
+        <li>TCP/Networking</li>
+        <li>Java</li>
+      </ul>
     </section>
 
     <section>

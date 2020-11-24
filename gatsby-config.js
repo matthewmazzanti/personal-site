@@ -13,6 +13,47 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-mermaid',
+            options: {
+              language: 'mermaid',
+              theme: 'forest',
+              viewport: {
+                width: 200,
+                height: 200
+              },
+              mermaidOptions: {
+                fontFamily: "Times New Roman",
+                flowchart: {
+                  width: "100%",
+                  curve: "basis",
+                }
+              }
+            }
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-tufte`,
+        ]
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
