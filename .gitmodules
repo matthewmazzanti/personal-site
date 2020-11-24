@@ -1,3 +1,6 @@
 [submodule "src/fonts/et-book"]
 	path = src/fonts/et-book
 	url = git@github.com:edwardtufte/et-book.git
+[submodule "public"]
+	path = public
+	url = git@gh-matthewmazzanti:matthewmazzanti/matthewmazzanti.github.io
