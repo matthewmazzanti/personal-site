@@ -12,6 +12,7 @@
     "gatsby-plugin-offline": "^3.3.3",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-sharp": "^2.7.1",
+    "gatsby-remark-autolink-headers": "^2.6.0",
     "gatsby-remark-mermaid": "^2.1.0",
     "gatsby-remark-prismjs": "^3.8.0",
     "gatsby-remark-tufte": "^1.0.6",

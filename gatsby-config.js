@@ -49,8 +49,33 @@ module.exports = {
               }
             }
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              icon: false
+            }
+          },
           `gatsby-remark-tufte`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              inlineCodeMarker: '|>',
+              aliases: {
+                hs: "haskell"
+              },
+              languageExtensions: [
+                {
+                  language: "ghci",
+                  extend: "haskell",
+                  insertBefore: {
+                    operator: {
+                      prompt: /λ= /
+                    }
+                  }
+                }
+              ]
+            }
+          }
         ]
       }
     },

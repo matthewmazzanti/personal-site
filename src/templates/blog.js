@@ -4,23 +4,23 @@ import Layout from "../components/layout.tsx"
 
 export default function Template({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { html } = markdownRemark
+  const { html, headings } = markdownRemark
 
   return (
-    <Layout>
+    <Layout title={headings[0].value}>
       <div dangerouslySetInnerHTML={{ __html: html }}/>
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+  query($abspath: String!) {
+    markdownRemark(fileAbsolutePath: { eq: $abspath }) {
       html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        slug
-        title
+      headings {
+        id
+        value
+        depth
       }
     }
   }

@@ -3,6 +3,15 @@ const pathRegex = (path) => {
   return `/${combined}/`;
 };
 
+const basename = (path) => {
+  const last = path.match(/\/([^.\/]*)[^\/]*$/);
+  if (!last) {
+    throw Error("no path matched");
+  }
+
+  return last[1];
+}
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const blogPostTemplate = require.resolve(`./src/templates/blog.js`);
@@ -10,15 +19,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     query Posts($path: String) {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000,
-        filter: { fileAbsolutePath: { regex: $path } }
+        filter: { fileAbsolutePath: { regex: $path } },
       ) {
         edges {
           node {
-            frontmatter {
-              slug
-            }
+            fileAbsolutePath
           }
         }
       }
@@ -33,11 +39,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.slug,
+      path: `blog/${basename(node.fileAbsolutePath)}`,
       component: blogPostTemplate,
       context: {
-        // additional data can be passed via context
-        slug: node.frontmatter.slug,
+        abspath: node.fileAbsolutePath,
       },
     })
   })
