@@ -36,7 +36,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: require.resolve("./src/components/blogTplt.js"),
+      component: require.resolve("./src/components/blogTemplate.tsx"),
       context: {
         slug: node.fields.slug,
       },

@@ -1,4 +1,5 @@
 import "fontsource-fira-code";
+// TODO: Create a no-ligature code class
 // import "fontsource-fira-mono";
 import "prismjs/themes/prism-solarizedlight.css";
 
