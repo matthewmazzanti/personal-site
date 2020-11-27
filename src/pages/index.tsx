@@ -7,33 +7,37 @@ const IndexPage = () =>
     <section>
       <h2>Software Engineer </h2>
       <table>
-        <tr>
-          <td>
-            <a href="https://www.linkedin.com/in/matthew-mazzanti-b4679211a">
-              LinkedIn
-            </a>
-          </td>
-          <td>
-            <a href="https://github.com/matthewmazzanti">
-              GitHub
-            </a>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://www.linkedin.com/in/matthew-mazzanti-b4679211a">
+                LinkedIn
+              </a>
+            </td>
+            <td>
+              <a href="https://github.com/matthewmazzanti">
+                GitHub
+              </a>
+            </td>
+          </tr>
+        </tbody>
       </table>
 
       <table>
-        <tr>
-          <td align="right">Address:</td>
-          <td>19305 Tattershall Drive, Germantown. MD 20874</td>
-        </tr>
-        <tr>
-          <td align="right">E-mail:</td>
-          <td>matthew.mazzanti@gmail.com</td>
-        </tr>
-        <tr>
-          <td align="right">Phone:</td>
-          <td>(240)855-6586</td>
-        </tr>
+        <tbody>
+          <tr>
+            <td align="right">Address:</td>
+            <td>19305 Tattershall Drive, Germantown. MD 20874</td>
+          </tr>
+          <tr>
+            <td align="right">E-mail:</td>
+            <td>matthew.mazzanti@gmail.com</td>
+          </tr>
+          <tr>
+            <td align="right">Phone:</td>
+            <td>(240)855-6586</td>
+          </tr>
+        </tbody>
       </table>
 
       <p>
@@ -69,8 +73,8 @@ const IndexPage = () =>
     <section>
       <h2>Experience</h2>
       <h3>Welgo, Inc.</h3>
+      <p>Feb 2020 to Now</p>
       <p>
-        <h4>Feb 2020 to Now</h4>
         Helped to bring a faltering product to market, rebuilding and
         refining critical systems such as devops, frontend, and backend while
         under tight timelines. I brought the scattered pieces into a single
@@ -118,8 +122,8 @@ const IndexPage = () =>
       </ul>
 
       <h3>AT&T Chief Security Office</h3>
+      <p>Jun 2019 to Feb 2020</p>
       <p>
-        <h4>Jun 2019 to Feb 2020</h4>
         Focused on command-line data manipulation tools, I brought my
         knowledge of compter science and UX design to make manipulating data
         easy and simple for security researchers at AT&T. Within my team,
@@ -168,8 +172,8 @@ const IndexPage = () =>
       </ul>
 
       <h3>Trushield Inc.</h3>
+      <p>Jun 2018 to Dec 2018</p>
       <p>
-        <h4>Jun 2018 to Dec 2018</h4>
         Worked to re-architect and re-implement an email phishing learning and
         analysis tool called Phishield to improve it in nearly every measurable
         aspect.
@@ -226,18 +230,16 @@ const IndexPage = () =>
     <section>
       <h2>Education</h2>
       <h3>University of Maryland, College Park</h3>
+      <p>Aug 2015 to May 2019 - Computer Science</p>
 
-      <p>
-        <h4>Aug 2015 to May 2019 - Computer Science</h4>
-        Study concentration:
-        <ul>
-          <li>Software development</li>
-          <li>Computer networking</li>
-          <li>Data analysis</li>
-          <li>Machine learning</li>
-          <li>Database design</li>
-        </ul>
-      </p>
+      <p>Study concentration:</p>
+      <ul>
+        <li>Software development</li>
+        <li>Computer networking</li>
+        <li>Data analysis</li>
+        <li>Machine learning</li>
+        <li>Database design</li>
+      </ul>
     </section>
   </Layout>;
 

@@ -21,13 +21,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: `${__dirname}/src`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -56,6 +49,7 @@ module.exports = {
             }
           },
           `gatsby-remark-tufte`,
+          "gatsby-remark-source-name",
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -85,7 +79,8 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Matthew Mazzanti`,
-        short_name: `Matthew Mazzanti`, start_url: `/`,
+        short_name: `Matthew Mazzanti`,
+        start_url: `/`,
         icon: `src/images/empty-favicon.png`,
       },
     },

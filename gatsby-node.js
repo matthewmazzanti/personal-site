@@ -1,37 +1,33 @@
-const pathRegex = (path) => {
-  const combined = `^${__dirname}/${path}`.replace(/\//g, "\\/");
-  return `/${combined}/`;
-};
+const { createFilePath } = require("gatsby-source-filesystem");
 
-const basename = (path) => {
-  const last = path.match(/\/([^.\/]*)[^\/]*$/);
-  if (!last) {
-    throw Error("no path matched");
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
+  if (node.internal.type === "MarkdownRemark") {
+    const slug = createFilePath({ node, getNode, basePath: "posts" })
+    createNodeField({ node, name: "slug", value: `blog${slug}` });
   }
-
-  return last[1];
-}
+};
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
-  const blogPostTemplate = require.resolve(`./src/templates/blog.js`);
 
   const result = await graphql(`
-    query Posts($path: String) {
-      allMarkdownRemark(
-        limit: 1000,
-        filter: { fileAbsolutePath: { regex: $path } },
-      ) {
+    {
+      allMarkdownRemark(filter: {fields: {sourceName: {eq: "posts"}}}) {
         edges {
           node {
-            fileAbsolutePath
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+            }
+            fields {
+              slug
+            }
           }
         }
       }
     }
-  `, { path: pathRegex("src/posts") });
+  `);
 
-  // Handle errors
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
@@ -39,11 +35,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: `blog/${basename(node.fileAbsolutePath)}`,
-      component: blogPostTemplate,
+      path: node.fields.slug,
+      component: require.resolve("./src/components/blogTplt.js"),
       context: {
-        abspath: node.fileAbsolutePath,
+        slug: node.fields.slug,
       },
     })
-  })
-}
+  });
+};

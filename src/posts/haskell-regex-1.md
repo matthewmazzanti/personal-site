@@ -1,4 +1,9 @@
-# Compiling Regex in Haskell, Part 1
+---
+title: Compiling Regex in Haskell, Part 1
+subtitle: Building and Testing a Regex Interpreter
+date: 2020-10-27
+---
+
 
 The full source for this post and the next posts in the series is available
 [here](https://github.com/matthewmazzanti/haskell-regex).

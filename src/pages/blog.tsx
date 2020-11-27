@@ -1,35 +1,70 @@
-import React from "react";
+import React, { FunctionComponent as Component } from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 
-const basename = (path) => {
-  const last = path.match(/\/([^.\/]*)[^\/]*$/);
-  if (!last) {
-    throw Error("no path matched");
-  }
+type Props = {
+  data: Query;
+};
 
-  return last[1];
-}
+const BlogList: Component<Props> = ({ data }) => {
+  const pages = data.allMarkdownRemark.edges.map(({ node }) => ({
+    ...node.frontmatter,
+    url: `/${node.fields.slug}`,
+  }));
 
-const BlogList = ({ data }: { data: any}) => {
   return (
     <Layout title="Blog Posts">
-      <div>Hello</div>
+      <section>
+        {pages.map((page: any) =>
+          <div key={page.url} style={{textAlign: "center"}}>
+            <a href={page.url} className="h2" style={{display: "inline-block"}}>
+              {page.title}
+            </a>
+
+            <p className="subtitle2">
+              {page.subtitle} - {page.date}
+            </p>
+          </div>
+        )}
+      </section>
     </Layout>
   )
 };
 
 export default BlogList;
 
+export type Query = {
+  allMarkdownRemark: {
+    edges: {
+      node: {
+        frontmatter: {
+          title: string,
+          subtitle: string,
+          date: string
+        },
+        fields: {
+          slug: string
+        }
+      },
+    }[]
+  }
+};
+
 export const pageQuery = graphql`
-  query($abspath: String!) {
-    markdownRemark(fileAbsolutePath: { eq: $abspath }) {
-      html
-      headings {
-        id
-        value
-        depth
+  {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            subtitle
+            date(formatString: "MMM DD, YYYY")
+          }
+          fields {
+            slug
+          }
+        }
       }
     }
   }

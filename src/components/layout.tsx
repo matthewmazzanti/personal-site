@@ -1,14 +1,18 @@
-import React from "react";
+import React, { FunctionComponent as Component } from "react";
 import { Helmet } from "react-helmet";
 
-const Layout = ({ title, children }) =>
+export type Props = {
+  title?: string,
+}
+
+const Layout: Component<Props> = ({ title, children }) =>
   <>
     <Helmet>
       <meta charSet="utf-8" />
       <title>{title ? `${title} -` : ""} Matthew Mazzanti</title>
     </Helmet>
 
-    <header>
+    <header className="root">
       <div className="title">
         Matthew Mazzanti
       </div>
