@@ -42,9 +42,11 @@
     "build": "gatsby build",
     "dev": "nodemon --exec 'kill-port --port 8000 && gatsby develop' --watch gatsby-node.js --watch gatsby-config.js --watch package.json",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "npm run dev",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy-git": "git -C public add -A && git -C public commit -m \"Deploy $(date -u)\" && git -C public push",
+    "deploy": "npm run build && npm run deploy-git && git add public"
   }
 }

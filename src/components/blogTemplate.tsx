@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Layout, Component } from "../util";
+import { Layout, Page } from "../util";
 
 type Query = {
   markdownRemark: {
@@ -27,7 +27,7 @@ export const pageQuery = graphql`
 `
 
 
-const BlogTemplate: Component<Query> = ({ data }) => {
+const BlogTemplate: Page<Query> = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
 
   return (
