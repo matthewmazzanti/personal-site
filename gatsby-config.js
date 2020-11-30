@@ -81,7 +81,7 @@ module.exports = {
         name: `Matthew Mazzanti`,
         short_name: `Matthew Mazzanti`,
         start_url: `/`,
-        icon: `src/images/empty-favicon.png`,
+        icon: `src/images/favicon.png`,
       },
     },
   ],

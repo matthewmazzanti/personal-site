@@ -7,8 +7,8 @@ date: 2020-10-27
 This post is a first in a larger series where I rebuild an
 [ed](https://en.wikipedia.org/wiki/Ed_(text_editor)) clone in Haskell. My goal is
 to use this implementation as a basic platform to test out some new algorithms
-I've been researching to process text handling, the first of which will be
-related to regex. I hope you stay tuned!
+I've been researching to do text processing, the first of which will be related
+to regex. I hope you stay tuned!
 
 The full source for this post and the next posts in the series is available
 [here](https://github.com/matthewmazzanti/haskell-regex).
