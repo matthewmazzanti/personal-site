@@ -8,12 +8,30 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 };
 
+exports.onCreatePage = ({page, actions}) => {
+  const { createPage, deletePage } = actions;
+
+  if (page.path === "/blog/") {
+    console.log(process.env.NODE_ENV);
+    deletePage(page);
+    createPage({
+      ...page,
+      context: {
+        ...page.context,
+      postStatus: process.env.NODE_ENV === "development"
+        ? ["draft", "post"]
+        : ["post"]
+      }
+    })
+  }
+}
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
   const result = await graphql(`
     {
-      allMarkdownRemark(filter: {fields: {sourceName: {eq: "posts"}}}) {
+      allMarkdownRemark {
         edges {
           node {
             frontmatter {

@@ -4,11 +4,12 @@ import { Layout, Page } from "../util";
 
 type Query = {
   markdownRemark: {
-    html: string,
+    html: string;
     frontmatter: {
-      title: string,
-      subtitle: string,
-      date: string,
+      title: string;
+      subtitle: string;
+      date: string;
+      status: string;
     }
   }
 }
@@ -21,6 +22,7 @@ export const pageQuery = graphql`
         title
         subtitle
         date(formatString: "MMM DD, YYYY")
+        status
       }
     }
   }
@@ -35,6 +37,7 @@ const BlogTemplate: Page<Query> = ({ data }) => {
       <header>
         <h1 className="underline" style={{display: "inline-block"}}>
           {frontmatter.title}
+          {frontmatter.status === "draft" ? "(Draft)" : null}
         </h1>
         <p className="subtitle">
           {frontmatter.subtitle} - {frontmatter.date}

@@ -1,27 +1,36 @@
 import React from "react"
 
+import { IconContext } from "react-icons";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
+
 import Layout from "../components/layout"
 
 const IndexPage = () =>
   <Layout>
     <section>
       <h2>Software Engineer </h2>
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <a href="https://www.linkedin.com/in/matthew-mazzanti-b4679211a">
-                LinkedIn
-              </a>
-            </td>
-            <td>
-              <a href="https://github.com/matthewmazzanti">
-                GitHub
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+
+      <IconContext.Provider value={{style: {verticalAlign: "-0.1em"}}}>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.linkedin.com/in/matthew-mazzanti-b4679211a">
+                  LinkedIn
+                  <FaLinkedin/>
+                </a>
+              </td>
+
+              <td>
+                <a href="https://github.com/matthewmazzanti">
+                  GitHub
+                  <FaGithubSquare/>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </IconContext.Provider>
 
       <table>
         <tbody>

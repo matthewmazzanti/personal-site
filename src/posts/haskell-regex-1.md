@@ -2,6 +2,7 @@
 title: Compiling Regex in Haskell, Part 1
 subtitle: Building and Testing a Regex Interpreter
 date: 2020-10-27
+status: post
 ---
 
 This post is a first in a larger series where I rebuild an
